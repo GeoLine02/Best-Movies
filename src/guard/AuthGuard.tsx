@@ -1,26 +1,12 @@
-import { ReactNode } from "react"
-import { useSelector } from "react-redux"
-import {Navigate} from "react-router-dom"
-import { RootState } from "../store/store"
-import routes from "../constants/routes"
+import { Outlet, Navigate } from "react-router-dom";
+import routes from "../constants/routes";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
+const AuthGuard = () => {
+  const isLogedIn = useSelector(
+    (state: RootState) => state.userReducer.isLoggedIn
+  );
+  return isLogedIn ? <Outlet /> : <Navigate to={routes.home} />;
+};
 
-interface IAuthGuard {
-  children: ReactNode
-}
-
-const AuthGuard = ({children}: IAuthGuard) => {
-
-  const isLogedIn = useSelector((state : RootState) => state.userReducer.isLogedIn)
-
-  if(!isLogedIn) {
-    return (
-      <div>
-        <Navigate to={routes.home} />
-      </div>
-    )
-  }
-
-  return <>{children}</>
-}
-
-export default AuthGuard
+export default AuthGuard;

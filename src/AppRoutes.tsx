@@ -1,25 +1,22 @@
 import { Route, Routes } from "react-router-dom";
-import appRoutes from "./config/routes";
+import routes from "./constants/routes";
+import AuthGuard from "./guard/AuthGuard";
+import FavoritesPage from "./pages/FavoritesPage";
+import HomePage from "./pages/HomePage";
+import MoviesPage from "./pages/MoviesPage";
+import SeriesPage from "./pages/SeriesPage";
 
 const AppRoutes = () => {
   return (
     <Routes>
-      {appRoutes.map((route) => {
-        if (route.Guard) {
-          return (
-            <Route key={route.path} element={
-              <route.Guard>
-               {route.Component && <route.Component />}
-              </route.Guard>
-            } /> 
-          )
-        }
-        return (
-          <Route key={route.path} path={route.path} Component={route.Component} />
-        )
-      })}
+      <Route path={routes.home} element={<HomePage />} />
+      <Route path={routes.movies} element={<MoviesPage />} />
+      <Route path={routes.series} element={<SeriesPage />} />
+      <Route Component={AuthGuard}>
+        <Route path={routes.favorites} element={<FavoritesPage />} />
+      </Route>
     </Routes>
-  )
-}
+  );
+};
 
-export default AppRoutes
+export default AppRoutes;
