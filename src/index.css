@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 body {
-    background: linear-gradient(
+  background: linear-gradient(
     to top left,
     rgb(28, 112, 155),
     rgb(135, 41, 163)
   );
   background-repeat: no-repeat;
   color: white;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
