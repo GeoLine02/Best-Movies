@@ -9,12 +9,12 @@ import SeriesPage from "./pages/SeriesPage";
 const AppRoutes = () => {
   return (
     <Routes>
+      <Route element={<AuthGuard />}>
+        <Route path={routes.favorites} element={<FavoritesPage />} />
+      </Route>
       <Route path={routes.home} element={<HomePage />} />
       <Route path={routes.movies} element={<MoviesPage />} />
       <Route path={routes.series} element={<SeriesPage />} />
-      <Route Component={AuthGuard}>
-        <Route path={routes.favorites} element={<FavoritesPage />} />
-      </Route>
     </Routes>
   );
 };
