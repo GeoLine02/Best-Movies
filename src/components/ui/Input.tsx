@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ChangeEventHandler, ReactNode } from "react";
 
 interface InputProps {
   size: "small" | "medium" | "large";
@@ -15,6 +15,7 @@ interface InputProps {
   placeholder: string;
   rounded: boolean;
   direction: "ltr" | "rtl";
+  handleChange: ChangeEventHandler<HTMLInputElement>;
 }
 
 const Input = ({
@@ -25,6 +26,7 @@ const Input = ({
   placeholder,
   rounded,
   direction,
+  handleChange,
 }: InputProps) => {
   return (
     <div
@@ -38,6 +40,7 @@ const Input = ({
     `}
     >
       <input
+        onChange={handleChange}
         placeholder={placeholder}
         className={`
       ${size === "small" && "p-1"}
