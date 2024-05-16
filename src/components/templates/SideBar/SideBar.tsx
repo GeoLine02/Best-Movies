@@ -30,7 +30,7 @@ export const SideBar = () => {
       className={`${isSideBarOpen ? "h-screen p-6 fixed flex justify-between gap-20  bg-gradient-to-tl from-blue-600 to-purple-600 bg-no-repeat" : "hidden"} `}
     >
       <div className="h-full flex flex-col justify-between items-center px-6">
-        <ul className=" flex flex-col items-center">
+        <ul className="flex flex-col items-center">
           <h1 className="text-4xl font-bold pb-6">Movies</h1>
           {navigationConfig.map((item) => {
             const Icon = item.icon;
