@@ -71,6 +71,38 @@ const moviesMockData = [
     imdbid: "tt0253474",
     imdb_link: "https://www.imdb.com/title/tt0253474",
   },
+  {
+    rank: 36,
+    title: "The dark knight",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    rating: "9.5",
+    id: "top36",
+  },
+  {
+    rank: 37,
+    title: "The Godfather Part II",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+    rating: "9.0",
+    id: "top37",
+  },
+  {
+    rank: 38,
+    title: "12 Angry Men",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_QL75_UX380_CR0,11,380,562_.jpg",
+    rating: "8.8",
+    id: "top38",
+  },
+  {
+    rank: 49,
+    title: "Schindler's List",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    rating: "8.5",
+    id: "top39",
+  },
 ];
 
 export default moviesMockData;
