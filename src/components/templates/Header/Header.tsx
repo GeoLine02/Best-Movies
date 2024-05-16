@@ -10,8 +10,8 @@ const Header = () => {
     disaptch(toggleSideBar());
   };
   return (
-    <div className="flex justify-between w-full my-5 lg:justify-around">
-      <div className="lg:hidden">
+    <div className="flex justify-between my-5 p-5 w-[70%] md:w-full">
+      <div>
         <button onClick={handletoggleSideBar}>
           <IoMenu size={25} />
         </button>
