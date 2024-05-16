@@ -19,7 +19,7 @@ const MoviesList = () => {
           </Button>
         </div>
       </div>
-      <div className="flex items-center gap-12">
+      <div className="flex items-center gap-12 flex-wrap justify-center max-w-7xl mx-auto">
         {moviesMockData.map((movie) => {
           return (
             <MovieCard
