@@ -1,8 +1,8 @@
 export interface IMovieType {
-  image: string;
-  title: string;
-  rating: string;
-  id: string;
+  image: string | undefined;
+  title: string | undefined;
+  rating: string | undefined;
+  id: string | undefined;
 }
 
 export interface IMovieDetails {

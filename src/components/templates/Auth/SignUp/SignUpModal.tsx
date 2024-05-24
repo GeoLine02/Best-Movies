@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { toggleSignUpModal } from "../../../../features/userSlice";
 
 const SignUpModal = () => {
-  const { error, isLoading, fetchData } = useFetch();
+  const { error, isLoading } = useFetch();
   const dispatch = useDispatch();
   const [user, setUser] = useState({
     email: "",

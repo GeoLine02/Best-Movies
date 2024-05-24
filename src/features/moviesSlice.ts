@@ -91,7 +91,7 @@ const moviesSlice = createSlice({
     searchMovies: (state, action) => {
       const searchTerm = action.payload.toLowerCase();
       state.search = [...state.movies, ...state.series].filter((movie) =>
-        movie.title.toLowerCase().includes(searchTerm)
+        movie?.title?.toLowerCase().includes(searchTerm)
       );
     },
   },
