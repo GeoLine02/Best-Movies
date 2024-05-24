@@ -50,7 +50,7 @@ const SIgnInForm = ({
               icon={<FaLock size={25} />}
               rounded
               size="large"
-              type="text"
+              type="password"
             />
           </div>
         </div>

@@ -9,6 +9,7 @@ interface IButtonProps {
   bordered?: boolean;
   background: "transparent" | "gray";
   rounded: "large" | "full" | "default";
+  gap?: boolean;
 }
 
 const Button = ({
@@ -20,6 +21,7 @@ const Button = ({
   text,
   rounded,
   onClick,
+  gap,
 }: IButtonProps) => {
   return (
     <div
@@ -29,12 +31,13 @@ const Button = ({
     ${size === "small" && "p-1"}    
     ${size === "medium" && "p-2"}    
     ${size === "large" && "p-3"}    
-    ${icon && "flex items-center gap-3"}
+    ${icon && "flex items-center justify-center gap-3"}
     ${background === "transparent" && "bg-transparent"}
     ${background === "gray" && "bg-gray-300 bg-opacity-30"}
     ${rounded === "default" && "rounded-none"}
     ${rounded == "large" && "rounded-lg"}
     ${rounded === "full" && "rounded-full"}
+    ${!gap && "gap-0"}
     outline-none
     `}
     >

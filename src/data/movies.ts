@@ -12,7 +12,7 @@ const moviesMockData = [
     thumbnail:
       "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_UY67_CR0,0,45,67_AL_.jpg",
     rating: "8.6",
-    id: "32",
+    id: "top32",
     year: 2023,
     imdbid: "tt15398776",
     imdb_link: "https://www.imdb.com/title/tt15398776",

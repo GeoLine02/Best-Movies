@@ -5,6 +5,8 @@ import FavoritesPage from "./pages/FavoritesPage";
 import HomePage from "./pages/HomePage";
 import MoviesPage from "./pages/MoviesPage";
 import SeriesPage from "./pages/SeriesPage";
+import MovieDetailsPage from "./pages/MovieDetailsPage";
+import SeriesDetailsPage from "./pages/SeriesDetailsPage";
 
 const AppRoutes = () => {
   return (
@@ -15,6 +17,8 @@ const AppRoutes = () => {
       <Route path={routes.home} element={<HomePage />} />
       <Route path={routes.movies} element={<MoviesPage />} />
       <Route path={routes.series} element={<SeriesPage />} />
+      <Route path={`${routes.home}:id`} element={<SeriesDetailsPage />} />
+      <Route path={`${routes.home}:id`} element={<MovieDetailsPage />} />
     </Routes>
   );
 };

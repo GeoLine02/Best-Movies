@@ -3,7 +3,6 @@ import SignUpForm from "./SignUpForm";
 import useFetch from "../../../../hooks/useFetch";
 import { useState } from "react";
 import { IUserCredentials } from "../../../../types/user";
-import { AUTH_API_BASE_URL } from "../../../../config/envs";
 import { IoClose } from "react-icons/io5";
 import { useDispatch } from "react-redux";
 import { toggleSignUpModal } from "../../../../features/userSlice";
@@ -38,11 +37,14 @@ const SignUpModal = () => {
         method: "POST",
         body: JSON.stringify(user),
       };
-      const resp = await fetchData(
-        `${AUTH_API_BASE_URL}/api/v1/auth/register`,
+      const res = await fetch(
+        "https://academyofdigitalindustriesbackend.onrender.com/api/v1/auth/register",
         apiCallOptions
       );
-      return resp;
+      if (res.ok) {
+        const data = res.json();
+        return data;
+      }
     } catch (err) {
       console.log(err);
     }
