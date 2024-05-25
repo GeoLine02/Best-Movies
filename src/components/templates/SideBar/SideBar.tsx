@@ -17,6 +17,7 @@ export const SideBar = () => {
   const handleToggleSideBar = () => {
     dispatch(toggleSideBar());
   };
+
   const isLoggedIn = useSelector(
     (state: RootState) => state.userReducer.isLoggedIn
   );
@@ -37,6 +38,7 @@ export const SideBar = () => {
             return (
               <div key={item.title}>
                 <NavLink
+                  onClick={handleToggleSideBar}
                   to={item.path}
                   className="flex items-center gap-4 my-3"
                 >
